@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	{php}
+		$email = 'qq.com';
+		echo $name.$email;
+	{/php}
+
+	<hr>
+
+	<?php  
+		$email = '163.com';
+		echo $age.$email;
+	?>
+
+
+
+
+	<hr>
+
+	{volist name="users" id="user" empty="暂无数据"}
+		<br />{$key+1} 大名： {$user['username']} --- 芳龄：{$user['age']}
+	{/volist}
+
+	<hr>
+
+	{volist name="users" id="user"}
+		<br />大名：{$user.username} --- 芳龄：{$user.age}
+	{/volist}
+
+
+	<hr>
+
+	{foreach name="users" item="user"}
+		<br />{$key+1} 大名： {$user.username} --- 芳龄：{$user['age']}
+	{/foreach}
+
+	
+	<hr>
+	大名：{$name}
+	芳龄：{$age}
+
+</body>
+</html>
