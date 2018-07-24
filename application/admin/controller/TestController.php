@@ -5,7 +5,7 @@ use think\Controller;
 //定义控制器名(和文件名一致)
 class TestController extends Controller {
  	public function  index(){
- 		return "我最爱南瓜";
+ 		return "我最爱南瓜 南瓜最爱鲨鱼";
  	} 
 
  	public function test(){
