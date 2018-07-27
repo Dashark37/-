@@ -42,4 +42,7 @@ Route::get("/logout","admin/public/logout");
 Route::group('admin',function(){
 	Route::get("category/add","admin/category/add");
 	Route::post("category/add","admin/category/add");
+	Route::any("category/index","admin/category/index");
+	Route::any("category/upd","admin/category/upd");
+	Route::any("category/ajaxDel","admin/category/ajaxDel");
 });
