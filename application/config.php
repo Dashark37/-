@@ -13,6 +13,27 @@ return [
     // +----------------------------------------------------------------------
     // | 应用设置
     // +----------------------------------------------------------------------
+    //验证码的配置
+    'captcha'  => [
+        // 验证码字符集合
+        'codeSet'  => '2345678', //'2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY', 
+        // 验证码字体大小(px)
+        'fontSize' => 24, 
+        // 是否画混淆曲线
+        'useCurve' => false, 
+         // 验证码图片高度
+        'imageH'   => 40,
+       // 验证码图片宽度
+        'imageW'   => 160, 
+        // 验证码位数
+        'length'   => 4, 
+        // 验证成功后是否重置        
+        'reset'    => true
+],    
+
+
+    // 密码的加密盐
+    'password_salt' => '#@%$%$#%',
     //定义后台资源的目录路径
     'admin_static' => '/static/admin',
     // 应用调试模式
@@ -42,7 +63,7 @@ return [
     // 是否开启多语言
     'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
-    'default_filter'         => '',
+    'default_filter'         => 'htmlspecialchars',
     // 默认语言
     'default_lang'           => 'zh-cn',
     // 应用类库后缀
